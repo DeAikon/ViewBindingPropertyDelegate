@@ -133,7 +133,7 @@ public abstract class LifecycleViewBindingProperty<in R : Any, out T : ViewBindi
         }
     }
 
-    internal fun postClear() {
+    protected fun postClear() {
         if (!mainHandler.post { clear() }) {
             clear()
         }
